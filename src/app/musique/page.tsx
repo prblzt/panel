@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { IconPause, IconPlay, IconSkip } from "@/components/icons";
+import { IconPause, IconPlay, IconSkip, MusicAppIcon } from "@/components/icons";
 import { Field, PrimaryButton, Screen, Sheet } from "@/components/ui";
 import { durationSeconds, withAccount } from "@/lib/format";
 import { usePanel } from "@/lib/store";
@@ -58,8 +58,8 @@ export default function MusiquePage() {
       }
     >
       <div className="overflow-hidden rounded-[28px] bg-[#1d1d1f] p-6 text-white">
-        <div className="mx-auto flex h-44 w-44 items-center justify-center rounded-[28px] bg-gradient-to-br from-[#fa2d48] to-[#ff8fa3] text-5xl shadow-2xl">
-          ♪
+        <div className="mx-auto h-44 w-44 overflow-hidden rounded-[22%] shadow-2xl">
+          <MusicAppIcon className="h-full w-full" />
         </div>
         <h2 className="mt-5 text-[22px] font-semibold">{track?.title ?? "Playlist vide"}</h2>
         <p className="text-[15px] text-white/70">{track?.artist ?? "Ajoute un titre"}</p>

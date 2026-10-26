@@ -10,6 +10,9 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "imapflow": "^2.9.1",
+    "isomorphic-dompurify": "^4.6.0",
+    "mailparser": "^3.12.4",
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0"

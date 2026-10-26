@@ -57,13 +57,11 @@ export function IconHouse(p: IconProps) {
   });
 }
 
+const appleMusicNote =
+  "M17.571 10.114v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z";
+
 export function IconMusic(p: IconProps) {
-  return symbol({
-    ...p,
-    children: (
-      <path d="M9.2 18.8c-1.5 0-2.7-1.1-2.7-2.5s1.2-2.5 2.7-2.5c.4 0 .7.1 1 .2V6.2l8.6-1.8v8.2c0 1.4-1.2 2.5-2.7 2.5s-2.7-1.1-2.7-2.5c0-1.1.8-2.1 1.9-2.4V7.1l-4.3.9v8.2c0 .2 0 .4-.1.6-.5 1.2-1.6 2-3.4 2Z" />
-    ),
-  });
+  return symbol({ ...p, children: <path d={appleMusicNote} /> });
 }
 
 export function IconBank(p: IconProps) {
@@ -217,20 +215,16 @@ export function HomeAppIcon({ className }: ArtProps) {
 export function MusicAppIcon({ className }: ArtProps) {
   const id = useGid("music");
   return (
-    <svg viewBox="0 0 60 60" className={className} aria-hidden>
+    <svg viewBox="0 0 24 24" className={className} aria-hidden>
       <defs>
-        <linearGradient id={id} x1="12" y1="4" x2="50" y2="58" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#FF6B8A" />
-          <stop offset="0.45" stopColor="#FA2D48" />
-          <stop offset="1" stopColor="#E1062C" />
+        <linearGradient id={id} x1="3" y1="0" x2="21" y2="24" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#FF5D73" />
+          <stop offset="0.48" stopColor="#FA243C" />
+          <stop offset="1" stopColor="#E11636" />
         </linearGradient>
       </defs>
-      <rect width="60" height="60" fill={`url(#${id})`} />
-      <g fill="#fff" transform="rotate(14 31 32)">
-        <ellipse cx="22.5" cy="43.5" rx="8" ry="5.8" />
-        <path d="M28.6 41.2V15.2h3.5v26z" />
-        <path d="M32.1 15.2 49 11.2v4.1L32.1 19.2z" />
-      </g>
+      <rect width="24" height="24" fill={`url(#${id})`} />
+      <path fill="#fff" d={appleMusicNote} />
     </svg>
   );
 }
